@@ -5,12 +5,12 @@ const app = express();
 // Middleware باش يفهم JSON
 app.use(express.json());
 
-// Routes
+// Routes (/api/v1/todos :كنقول للسيرفر: أي طلب بدا بـ  سير لهداك الملف ديال todoRoutes)
 const todoRoutes = require("./routes/todoRoutes");
 app.use("/api/v1/todos", todoRoutes);
 
 app.get("/", (req, res) => {
-  res.send("✅ Server is running!");
+  res.send("Server is running ✅");
 });
 
 const PORT = 5000;

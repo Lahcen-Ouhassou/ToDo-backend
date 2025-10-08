@@ -31,21 +31,19 @@ router.post("/", (req, res) => {
   if (!title) {
     return res.status(400).json({ message: "Title is required" });
   }
-
   const newTodo = {
     id: todos.length + 1,
     title,
     done: false,
   };
-
   todos.push(newTodo);
   res.status(201).json(newTodo);
 });
 
 // 4. PUT (update todo)
 router.put("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const todo = todos.find((t) => t.id === id);
+  const id = parseInt(req.params.id); // hna knrj3o string l number dak id w had req.params.id ktjib id li ja mn URL 
+  const todo = todos.find((t) => t.id === id); // hna ktmchi t9lb ela dak id li drna f URL w ky9leb kol 3onsr f json li huwa : t 
 
   if (!todo) {
     return res.status(404).json({ message: "Todo not found" });
