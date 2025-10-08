@@ -1,5 +1,7 @@
 const express = require("express");
-require("./db");
+
+const connectDB = require("./config/db");
+connectDB();
 
 const app = express();
 
@@ -7,8 +9,8 @@ const app = express();
 app.use(express.json());
 
 // Routes (/api/v1/todos :كنقول للسيرفر: أي طلب بدا بـ  سير لهداك الملف ديال todoRoutes)
-const todoRoutes = require("./routes/todoRoutes");
-app.use("/api/v1/todos", todoRoutes);
+const todoRouter = require("./routes/todoRoutes");
+app.use("/api/v1/todos", todoRouter);
 
 app.get("/", (req, res) => {
   res.send("Server is running ✅");
