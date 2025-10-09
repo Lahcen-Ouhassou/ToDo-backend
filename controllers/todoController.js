@@ -1,3 +1,5 @@
+//Logic dyal CRUD (create, read, update, delete)
+
 const Todo = require("../models/todoModel");
 
 // 🟢 Get all todos
