@@ -1,4 +1,4 @@
-//Logic dyal CRUD (create, read, update, delete)
+// Logic dyal CRUD (create, read, update, delete)
 
 const Todo = require("../models/todoModel");
 

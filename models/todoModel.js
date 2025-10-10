@@ -1,4 +1,4 @@
-//Schema dyal MongoDB collection
+// Schema dyal MongoDB collection
 
 const mongoose = require("mongoose");
 

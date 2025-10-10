@@ -1,4 +1,4 @@
-//Main server file
+// Main server file
 
 const express = require("express");
 
@@ -14,7 +14,7 @@ const todoRouter = require("./routes/todoRoutes");
 app.use("/api/v1/todos", todoRouter);
 
 app.get("/", (req, res) => {
-  res.send("Server is running ✅");
+  res.send("Server is Running ✅");
 });
 
 const PORT = 5000;
