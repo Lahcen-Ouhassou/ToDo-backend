@@ -16,7 +16,6 @@ exports.getTodo = (req, res) => {
   if (!todo) {
     return res.status(404).json({ message: "Todo not found" });
   }
-
   res.json(todo);
 };
 
@@ -37,7 +36,6 @@ exports.updateTodo = async (req, res) => {
     { completed },
     { new: true }
   );
-
   res.status(200).json(updatedTodo);
 };
 
